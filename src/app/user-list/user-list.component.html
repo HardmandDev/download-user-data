@@ -1,0 +1,37 @@
+<div>
+    <h2>Listado de usuarios</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre de usuario</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Correo electrónico</th>
+                <th>Fecha de nacimiento</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th>Sitio web</th>
+                <th>Compañia</th>
+                <th>Tipo de negocio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.login.username }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.birthDate }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.address.street + " - " + user.address.suite }}</td>
+                <td>{{ user.address.city }}</td>
+                <td>{{ user.website }}</td>
+                <td>{{ user.company.name }}</td>
+                <td>{{ user.company.bs }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
